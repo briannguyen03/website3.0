@@ -1,0 +1,115 @@
+.main{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    position: relative;
+    top: 170px;
+}
+
+#top {
+    font-size: 13px;
+    font-family: "Source Code Pro", "Jersey", sans-serif;
+    font-weight: 100;
+
+    display: flex;
+    justify-content: space-evenly;
+
+    border: 0.5px solid;
+    border-radius: 20px;
+    height: 25px;
+    width: 170px;
+    background-color: gainsboro;
+}
+
+#top a{
+    color: maroon;
+    transition: all 0.3s;
+}
+
+#top a:hover{
+    color:tomato;
+}
+
+
+#image{
+    border: 2px solid;
+    width: 190px;
+    height: 170px;
+    border-radius: 20px;
+    background-color: rgb(44,44,46);
+    display: flex;
+    justify-content: center;
+}
+
+#title{
+
+    width: fit-content;
+    height: 50px;
+    font-size: 15px;
+    font-family: "Source Code Pro", "EB Garamond",sans-serif;
+    font-weight: 100;
+}
+
+#name{
+    width: fit-content;
+    height: 40px;
+    font-family: "Source Code Pro", "EB Garamond",sans-serif;
+}
+
+#links{
+
+    font-family: "Source Code Pro", "EB Garamond",sans-serif;
+
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 25px;
+    flex-wrap: wrap;
+    gap: 7px;
+    
+    position: relative;
+    top: 20px;
+}
+
+#place{
+    font-family: "IBM plex mono", "Source Code Pro", sans-serif;
+
+    position: relative;
+    top: 170px;
+}
+
+a{
+    text-decoration: none;
+}
+
+.main a{
+    color: maroon;
+    text-decoration: none;
+    font-weight: 400;
+
+    transition: transform 0.3s, color 0.3s;
+}
+
+.main a:hover{
+    color: tomato;
+    transform: translateY(-3px);
+}
+
+.main a:active{
+    color: gold;
+}
+
+#place h6{
+    transition: all 0.7s ease;
+}
+
+#place h6:hover{
+    color: gold;
+}
+
+#place h6:active{
+    transform: scale(2,2);
+}

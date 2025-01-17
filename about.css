@@ -1,0 +1,125 @@
+body{
+     overflow-x: hidden;
+}
+
+p{
+    font-size: 13px;
+}
+
+hr{
+    z-index: -1;
+}
+
+#top{
+    font-size: 13px;
+    font-family: "Source Code Pro", "Jersey", sans-serif;
+    font-weight: 100;
+
+    display: flex;
+    justify-content: space-around;
+
+    border: 0.5px solid;
+    border-radius: 20px;
+    height: 25px;
+    width: 250px;
+    background-color: gainsboro;
+
+    position:sticky;
+    top: 5px;
+
+    z-index: 1000;
+}
+
+
+#about{
+    display: flex;
+    flex-direction: column;
+    font-family: "Source code Pro",sans-serif;
+
+    position: relative;
+    top: 130px;
+}
+
+#image{
+width: 600px;
+height: 400px;
+position: absolute;
+left: 750px
+}
+
+#image img{
+    aspect-ratio: 4/3;
+}
+
+#mid{
+    position: relative;
+    top: 300px;
+}
+
+#mid h2{
+    font-family: "Source Code Pro", sans-serif;
+    font-weight: 250;
+}
+
+#thingsIdo h1{
+    display: flex;
+    justify-content: center;
+
+    position: relative;
+    top: 450px;
+
+    font-family: "Source code pro",sans-serif;
+    font-size: 17px;
+    font-weight: 300;
+}
+
+#images{
+
+    position: relative;
+    top: 600px;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#things{
+
+    position: relative;
+    top: 380px;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    gap: 25px;
+
+    font-size: 20px;
+    height: 300px;
+}
+
+
+#things h2{
+    font-family: "Source Code Pro", sans-serif;
+    font-weight: 100;
+
+    transition: all 0.3s;
+
+}
+
+#things h2:hover{
+    color: tomato;
+    transform: translateY(-3px);
+}
+
+
+
+a{
+    text-decoration: none;
+    color: gray;
+    transition: all 0.3s;
+}
+
+a:hover{
+    color:tomato;
+}
