@@ -24,19 +24,6 @@ h3{
     top: 50px;
 }
 
-.graph{
-    display: flex;
-    justify-content: space-evenly;
-    gap: 70px;
-    width: fit-content;
-    position: relative;
-    left: 10%;
-    top: 50px;
-    width: fit-content;
-    font-family:"Source Code Pro", "Jersey", sans-serif;
-    font-size:large;
-}
-
 .graph_descript{
     height: fit-content;
     width: 600px;
@@ -47,6 +34,21 @@ h3{
     position: relative;
     display: flex;
     justify-content: space-around;
+}
+
+#top{
+    font-size: 13px;
+    font-family: "Source Code Pro", "Jersey", sans-serif;
+    font-weight: 100;
+
+    display: flex;
+    justify-content: space-around;
+
+    border: 0.5px solid;
+    border-radius: 20px;
+    height: 25px;
+    width: 250px;
+    background-color: gainsboro;
 }
 
 #description{
@@ -70,9 +72,6 @@ h3{
     width: 80vw;     
     max-width: 800px;   
     min-width: 300px;  
-}
-#sketch-holder p{
-    font-size: 12px;
 }
 
 #journal-container {
@@ -109,20 +108,4 @@ h3{
     border: 2px solid black;     /* thickness, style, color */
     border-radius: 3px;          /* optional: rounded corners */
     padding: 0;                  /* usually keep this 0 for iframes */
-}
-
-
-#top{
-    font-size: 13px;
-    font-family: "Source Code Pro", "Jersey", sans-serif;
-    font-weight: 100;
-
-    display: flex;
-    justify-content: space-around;
-
-    border: 0.5px solid;
-    border-radius: 20px;
-    height: 25px;
-    width: 250px;
-    background-color: gainsboro;
-}
+  }

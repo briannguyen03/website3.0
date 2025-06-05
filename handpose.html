@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>p5.js Sketch</title>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/p5@1.9.0/lib/p5.min.js"></script> --> 
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Jersey+10&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.1/p5.js"></script>
+  <script src="https://unpkg.com/ml5@1/dist/ml5.min.js"></script>
+
+  <link rel="stylesheet" href="handpose.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+
+<body>
+
+    <div id="top">
+        <a id="homepage" href="index.html" title="home">🏠 home</a>
+        <a id="projects" href="projects.html" title="projects">🧰 projects</a>
+        <a id="email" href="mailto:nguyen.brian1403@gmail.com" title="email">📫 e-mail</a>
+    </div>
+
+
+  <main>
+    <h1>Hand Detection with HandPose</h1>
+    <hr>
+    
+    <div id="side-bar">
+        <div id="journal-container">
+            <div id="journal-content">
+                <h3>What I learned</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel itaque consequatur minus delectus ex ipsam animi voluptatem dolore, nisi suscipit odio, doloribus dicta quia obcaecati saepe atque porro, distinctio adipisci!</p>
+            </div>
+        </div>
+    
+        <div id="video-container">
+            <div id="video-content">
+                <iframe 
+                    width="475" 
+                    height="267" 
+                    src="https://www.youtube.com/embed/vfNHdVbE-l4" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </div>
+
+    <div id="description">
+    <h3>What is it?</h3>
+    <p>HandPose is a machine-learning model that allows for palm detection and hand-skeleton finger tracking 
+        in the browser. It can detect multiple hands at a time and for each hand, and provides 21 2D and 3D hand keypoints 
+        that describe important locations on the palm and fingers. The ml5.js HandPose model is based on the HandPose implementation by TensorFlow.js.
+        <br><strong><a href="https://docs.ml5js.org/#/reference/handpose">- ML5.js</a></strong></p>
+
+    <h3 id="rules">The following functionality is provided:</h3>
+    <ol>
+        <li>Hand Keypoint Detection: HandPose can detect the 2D and 3D coordinates of 21 keypoints on a hand.</li>
+        <li>Handedness: HandPose can determine the handedness (left or right) of the detected hand.</li>
+        <li>Multiple Hands: HandPose can detect multiple hands at the same time.</li>
+    </ol>
+    </div>
+    <br>
+    <div id="sketch-holder">
+        <h3>Press Start to Begin</h3>
+          <!-- Your sketch file -->
+        <script id="script" src="handpose.js"></script>
+        <div id="controls">
+            <button onclick="startVision()">Start</button>
+            <button onclick="stopVision()">Stop</button>
+        </div>
+        <p id="status">Loading model...</p>
+    </div>
+
+    
+
+
+
+  </main>
+  
+</body>
+</html>

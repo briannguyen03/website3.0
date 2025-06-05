@@ -5,7 +5,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Jersey+10&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.1/p5.js"></script>
+    <script src="https://unpkg.com/ml5@1/dist/ml5.min.js"></script>
 
     <link rel="stylesheet" href="ml_project.css">
     <meta charset="UTF-8">
@@ -21,29 +22,84 @@
         <a id="email" href="mailto:nguyen.brian1403@gmail.com" title="email">📫 e-mail</a>
     </div>
 
-<h1>Drawing through Ai</h1>
-<hr>
-
-        <div class="graph">
-            <img src="images/ml_image.png" height="500" width="400">
-           <div class="graph_descript">
-            <p>This is a graph taken from a <a href="https://research.google/blog/on-device-real-time-hand-tracking-with-mediapipe/" target="_blank">Google</a> research blog.<br>"Our MediaPipe graph for hand tracking is shown below.<br>The graph consists of two subgraphs—one for hand detection and one for hand keypoints (i.e., landmark) computation."</p>
-            <a href="" target="_blank"><p>check out my linkedin post!</p></a>
-           </div>
-        </div>
-       
-<div class="bottom">
-    <h1>Resources</h1>
+    <main>
+        <h1>Drawing with Ai</h1>
         <hr>
-    <div class="resources">
-        <a href="https://storage.googleapis.com/mediapipe-assets/Model%20Card%20Hand%20Tracking%20(Lite_Full)%20with%20Fairness%20Oct%202021.pdf" target="_blank">
-            <h3>Model Card</h3>
-        </a>
-        <a href="https://github.com/google-ai-edge/mediapipe/blob/master/docs/solutions/hands.md" target="_blank">
-            <h3>Github</h3>
-        </a>
-    </div>
-</div>
+
+        <div id="side-bar">
+            <div id="journal-container">
+                <div id="journal-content">
+                    <h3>What I learned</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel itaque consequatur minus delectus ex ipsam animi voluptatem dolore, nisi suscipit odio, doloribus dicta quia obcaecati saepe atque porro, distinctio adipisci!</p>
+                </div>
+            </div>
+        
+            <div id="video-container">
+                <div id="video-content">
+                    <iframe 
+                        width="475" 
+                        height="267" 
+                        src="https://www.youtube.com/embed/vfNHdVbE-l4" 
+                        title="YouTube video player" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </div>
+
+        
+        <div id="description">
+            <h3>What is it?</h3>
+            <p>HandPose is a machine-learning model that allows for palm detection and hand-skeleton finger tracking 
+                in the browser. It can detect multiple hands at a time and for each hand, and provides 21 2D and 3D hand keypoints 
+                that describe important locations on the palm and fingers. The ml5.js HandPose model is based on the HandPose implementation by TensorFlow.js.
+                <br><strong><a href="https://docs.ml5js.org/#/reference/handpose">- ML5.js</a></strong></p>
+        
+            <h3 id="rules">The following functionality is provided:</h3>
+            <ol>
+                <li>Hand Keypoint Detection: HandPose can detect the 2D and 3D coordinates of 21 keypoints on a hand.</li>
+                <li>Handedness: HandPose can determine the handedness (left or right) of the detected hand.</li>
+                <li>Multiple Hands: HandPose can detect multiple hands at the same time.</li>
+            </ol>
+            </div>
+            <br>
+
+            <div id="sketch-holder">
+                <h3>Press Start to Begin</h3>
+                <p>Hold up both hands with your index and thumb apart. Pinch the index and thumb of your left hand to draw on the canvas. The distance between your right hand index and thumb controls the thickness of the brush</p>
+                  <!-- Your sketch file -->
+                <script id="script" src="drawing_with_ai.js"></script>
+                <div id="controls">
+                    <button onclick="startVision()">Start</button>
+                    <button onclick="stopVision()">Stop</button>
+                </div>
+                <h4 id="status">Loading model...</h4>
+            </div>
+        
+
+                <div class="graph">
+                    <img src="images/ml_image.png" height="500" width="400">
+                   <div class="graph_descript">
+                    <p>This is a graph taken from a <a href="https://research.google/blog/on-device-real-time-hand-tracking-with-mediapipe/" target="_blank">Google</a> research blog.<br>"Our MediaPipe graph for hand tracking is shown below.<br>The graph consists of two subgraphs—one for hand detection and one for hand keypoints (i.e., landmark) computation."</p>
+                    <a href="" target="_blank"><p>check out my linkedin post!</p></a>
+                   </div>
+                </div>
+               
+        <div class="bottom">
+            <h1>Resources</h1>
+                <hr>
+            <div class="resources">
+                <a href="https://storage.googleapis.com/mediapipe-assets/Model%20Card%20Hand%20Tracking%20(Lite_Full)%20with%20Fairness%20Oct%202021.pdf" target="_blank">
+                    <h3>Model Card</h3>
+                </a>
+                <a href="https://github.com/google-ai-edge/mediapipe/blob/master/docs/solutions/hands.md" target="_blank">
+                    <h3>Github</h3>
+                </a>
+            </div>
+        </div>
+    </main>
 
 </body>
 </html>
