@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>p5.js Sketch</title>
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.9.0/lib/p5.min.js"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Jersey+10&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="game_of_life.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+
+<body>
+
+    <div id="top">
+        <a id="homepage" href="index.html" title="home">🏠 home</a>
+        <a id="projects" href="projects.html" title="projects">🧰 projects</a>
+        <a id="email" href="mailto:nguyen.brian1403@gmail.com" title="email">📫 e-mail</a>
+    </div>
+
+
+  <main>
+    <h1>The Game of Life!</h1>
+    <hr>
+    
+    <div id="side-bar">
+        <div id="journal-container">
+            <div id="journal-content">
+                <h3>What I learned</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel itaque consequatur minus delectus ex ipsam animi voluptatem dolore, nisi suscipit odio, doloribus dicta quia obcaecati saepe atque porro, distinctio adipisci!</p>
+            </div>
+        </div>
+    
+        <div id="video-container">
+            <div id="video-content">
+                <iframe 
+                    width="475" 
+                    height="267" 
+                    src="https://www.youtube.com/embed/FWSR_7kZuYg" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="description">
+    <h3>What is it?</h3>
+    <p>The Game of Life, also known as Conway's Game of Life or simply Life, is a cellular automaton devised by the British mathematician 
+    John Horton Conway in 1970.[1] It is a zero-player game,[2][3] meaning that its evolution is determined by 
+    its initial state, requiring no further input. One interacts with the Game of Life by creating an initial 
+    configuration and observing how it evolves. It is Turing complete and can simulate a universal constructor 
+    or any other Turing machine. <br> <br><strong><a href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life">- Wikipedia</a></strong></p>
+
+    <h3 id="rules">The 4 Rules</h3>
+    <p>There are only 4 rules that govern the behaviour of the cells. They are given by the following,</p>
+    <ol>
+        <li>Any live cell with fewer than two live neighbours dies, as if by underpopulation.</li>
+        <li>Any live cell with two or three live neighbours lives on to the next generation.</li>
+        <li>Any live cell with more than three live neighbours dies, as if by overpopulation.</li>
+        <li>Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction.</li>
+    </ol>
+    </div>
+    <br>
+    <div id="sketch-holder">
+        <h3>Click Anywhere to Begin</h3>
+          <!-- Your sketch file -->
+        <script id="script" src="game_of_life.js"></script>
+    </div>
+
+    
+
+
+
+  </main>
+  
+</body>
+</html>

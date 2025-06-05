@@ -31,26 +31,55 @@ hr{
 }
 
 
-#about{
+#about {
     display: flex;
     flex-direction: column;
-    font-family: "Source code Pro",sans-serif;
-
+    font-family: "Source Code Pro", sans-serif;
     position: relative;
     top: 130px;
 }
-
-#image{
-width: 600px;
-height: 400px;
-position: absolute;
-left: 750px
+  
+  /* NEW: wrap text and image */
+  #about-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem;
 }
-
-#image img{
-    aspect-ratio: 4/3;
+  
+  /* On wider screens, put text + image side-by-side */
+  @media (min-width: 800px) {
+    #about-content {
+      flex-direction: row;
+      align-items: flex-start;
+    }
+  
+    #whois {
+      flex: 1;
+    }
+  
+    #image {
+      flex: 1;
+      max-width: 600px;
+      margin: 0; /* override the auto-centering on wide screens */
+    }
 }
-
+  
+#image {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+  
+  
+#image img {
+    width: 100%;     
+    height: auto;      
+    display: block;   
+    object-fit: contain; 
+  }
+  
+  
 #mid{
     position: relative;
     top: 300px;
@@ -61,58 +90,72 @@ left: 750px
     font-weight: 250;
 }
 
-#thingsIdo h1{
+#bottom {
+    position: relative;
+    margin-top: 18rem; /* use positive margin instead of -8rem */
+    padding: 2rem 1rem;
+}
+  
+  /* Section heading */
+#thingsIdo h1 {
     display: flex;
     justify-content: center;
-
-    position: relative;
-    top: 450px;
-
-    font-family: "Source code pro",sans-serif;
+  
+    font-family: "Source Code Pro", sans-serif;
     font-size: 17px;
     font-weight: 300;
+    margin-bottom: 2rem;
 }
-
-#images{
-
-    position: relative;
-    top: 600px;
-
+  
+  /* Wrap images and text together */
+#images, #things {
     display: flex;
     justify-content: space-around;
     align-items: center;
-}
-
-#things{
-
-    position: relative;
-    top: 380px;
-
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-end;
     flex-wrap: wrap;
     gap: 25px;
-
-    font-size: 20px;
-    height: 300px;
+    margin-bottom: 2rem;
 }
-
-
-#things h2{
+  
+  /* Activity labels */
+#things {
+    font-size: 20px;
+    align-items: flex-end;
+}
+  
+#things h2 {
     font-family: "Source Code Pro", sans-serif;
     font-weight: 100;
-
     transition: all 0.3s;
-
 }
-
-#things h2:hover{
+  
+#things h2:hover {
     color: tomato;
     transform: translateY(-3px);
 }
-
-
+  
+  /* Responsive behavior for small screens */
+@media (max-width: 700px) {
+    #images, #things {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    #thingsIdo h1 {
+      font-size: 15px;
+      text-align: center;
+    }
+  
+    #things {
+      font-size: 18px;
+      gap: 1rem;
+    }
+  
+    #bottom {
+      padding-bottom: 3rem;
+    }
+}
+  
 
 a{
     text-decoration: none;
