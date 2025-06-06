@@ -5,7 +5,6 @@ let connections;
 let running = false;
 let modelReady = false;
 
-
 function gotResult(results) {
   if (running) {
     hands = results;
@@ -13,15 +12,33 @@ function gotResult(results) {
 }
 
 function setup() {
-  let canvas = createCanvas(640, 480);
+  let canvasWidth, canvasHeight;
+
+  // Set canvas size based on screen width
+  if (windowWidth < 600) {
+    // Mobile
+    canvasWidth = 320;
+    canvasHeight = 240;
+  } else if (windowWidth < 1024) {
+    // Tablet
+    canvasWidth = 480;
+    canvasHeight = 360;
+  } else {
+    // Desktop
+    canvasWidth = 640;
+    canvasHeight = 480;
+  }
+
+  let canvas = createCanvas(canvasWidth, canvasHeight);
   canvas.parent('sketch-holder');
+
   hand = ml5.handPose({ flipped: true }, () => {
     document.getElementById("status").innerText = "Model loaded.";
     modelReady = true;
   });
-  noLoop(); // Don't draw until started
-}
 
+  noLoop();
+}
 
 function draw() {
   if (!running) return;
@@ -57,9 +74,8 @@ function draw() {
 function startVision() {
   if (!modelReady || running) return;
 
-  // Start video capture and detection
   video = createCapture(VIDEO, { flipped: true });
-  video.size(640, 480);
+  video.size(width, height); // match canvas
   video.hide();
 
   hand.detectStart(video, gotResult);
@@ -72,7 +88,6 @@ function startVision() {
 function stopVision() {
   if (!running) return;
 
-  // Stop detection and camera
   running = false;
   noLoop();
   hands = [];
@@ -81,5 +96,5 @@ function stopVision() {
     video.elt.srcObject.getTracks().forEach(track => track.stop());
   }
 
-  clear(); // Clear the canvas
+  clear();
 }

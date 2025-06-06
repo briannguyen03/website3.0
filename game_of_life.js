@@ -1,4 +1,4 @@
-let cellSize = 12;
+let cellSize = 13;
 let columnCount;
 let rowCount;
 let currentCells = [];
@@ -7,7 +7,17 @@ let nextCells = [];
 function setup() {
   // Set simulation framerate to 10 to avoid flickering
   frameRate(10);
-  let canvas = createCanvas(720, 400); 
+  let canvas;
+  if (windowWidth < 600) {
+    // Mobile
+    canvas = createCanvas(450, 250);
+  } else if (windowWidth < 1024) {
+    // Tablet
+    canvas = createCanvas(600, 320);
+  } else {
+    // Desktop
+    canvas = createCanvas(720, 400);
+  }
   canvas.parent('sketch-holder');
 
   // Calculate columns and rows

@@ -26,15 +26,27 @@
   <main>
     <h1>The Game of Life!</h1>
     <hr>
+
+    <div class="content-wrapper">
+
     
-    <div id="side-bar">
-        <div id="journal-container">
-            <div id="journal-content">
-                <h3>What I learned</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel itaque consequatur minus delectus ex ipsam animi voluptatem dolore, nisi suscipit odio, doloribus dicta quia obcaecati saepe atque porro, distinctio adipisci!</p>
-            </div>
-        </div>
+        <div id="description">
+        <h3>What is it?</h3>
+        <p>The Game of Life, also known as Conway's Game of Life or simply Life, is a cellular automaton devised by the British mathematician 
+        John Horton Conway in 1970.[1] It is a zero-player game,[2][3] meaning that its evolution is determined by 
+        its initial state, requiring no further input. One interacts with the Game of Life by creating an initial 
+        configuration and observing how it evolves. It is Turing complete and can simulate a universal constructor 
+        or any other Turing machine. <br> <br><strong><a href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life">- Wikipedia</a></strong></p>
     
+        <h3 id="rules">The 4 Rules</h3>
+        <p>There are only 4 rules that govern the behaviour of the cells. They are given by the following,</p>
+        <ol>
+            <li>Any live cell with fewer than two live neighbours dies, as if by underpopulation.</li>
+            <li>Any live cell with two or three live neighbours lives on to the next generation.</li>
+            <li>Any live cell with more than three live neighbours dies, as if by overpopulation.</li>
+            <li>Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction.</li>
+        </ol>
+    <br>
         <div id="video-container">
             <div id="video-content">
                 <iframe 
@@ -48,35 +60,24 @@
                 </iframe>
             </div>
         </div>
-
+        </div>
+    
+        <div id="side-bar">
+            <div id="journal-container">
+                <div id="journal-content">
+                    <h3>What I learned</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel itaque consequatur minus delectus ex ipsam animi voluptatem dolore, nisi suscipit odio, doloribus dicta quia obcaecati saepe atque porro, distinctio adipisci!</p>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <div id="description">
-    <h3>What is it?</h3>
-    <p>The Game of Life, also known as Conway's Game of Life or simply Life, is a cellular automaton devised by the British mathematician 
-    John Horton Conway in 1970.[1] It is a zero-player game,[2][3] meaning that its evolution is determined by 
-    its initial state, requiring no further input. One interacts with the Game of Life by creating an initial 
-    configuration and observing how it evolves. It is Turing complete and can simulate a universal constructor 
-    or any other Turing machine. <br> <br><strong><a href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life">- Wikipedia</a></strong></p>
-
-    <h3 id="rules">The 4 Rules</h3>
-    <p>There are only 4 rules that govern the behaviour of the cells. They are given by the following,</p>
-    <ol>
-        <li>Any live cell with fewer than two live neighbours dies, as if by underpopulation.</li>
-        <li>Any live cell with two or three live neighbours lives on to the next generation.</li>
-        <li>Any live cell with more than three live neighbours dies, as if by overpopulation.</li>
-        <li>Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction.</li>
-    </ol>
-    </div>
     <br>
     <div id="sketch-holder">
         <h3>Click Anywhere to Begin</h3>
           <!-- Your sketch file -->
         <script id="script" src="game_of_life.js"></script>
     </div>
-
-    
-
 
 
   </main>

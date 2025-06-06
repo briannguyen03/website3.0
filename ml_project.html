@@ -23,47 +23,49 @@
     </div>
 
     <main>
+
         <h1>Drawing with Ai</h1>
         <hr>
 
-        <div id="side-bar">
-            <div id="journal-container">
-                <div id="journal-content">
-                    <h3>What I learned</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel itaque consequatur minus delectus ex ipsam animi voluptatem dolore, nisi suscipit odio, doloribus dicta quia obcaecati saepe atque porro, distinctio adipisci!</p>
+        <div class="content-wrapper">
+            <div id="side-bar">
+                <div id="journal-container">
+                    <div id="journal-content">
+                        <h3>What I learned</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel itaque consequatur minus delectus ex ipsam animi voluptatem dolore, nisi suscipit odio, doloribus dicta quia obcaecati saepe atque porro, distinctio adipisci!</p>
+                    </div>
                 </div>
             </div>
-        
-            <div id="video-container">
-                <div id="video-content">
-                    <iframe 
-                        width="475" 
-                        height="267" 
-                        src="https://www.youtube.com/embed/vfNHdVbE-l4" 
-                        title="YouTube video player" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                        allowfullscreen>
-                    </iframe>
+    
+            
+            <div id="description">
+                <h3>What is it?</h3>
+                <p>HandPose is a machine-learning model that allows for palm detection and hand-skeleton finger tracking 
+                    in the browser. It can detect multiple hands at a time and for each hand, and provides 21 2D and 3D hand keypoints 
+                    that describe important locations on the palm and fingers. The ml5.js HandPose model is based on the HandPose implementation by TensorFlow.js.
+                    <br><strong><a href="https://docs.ml5js.org/#/reference/handpose">- ML5.js</a></strong></p>
+            
+                <h3 id="rules">The following functionality is provided:</h3>
+                <ol>
+                    <li>Hand Keypoint Detection: HandPose can detect the 2D and 3D coordinates of 21 keypoints on a hand.</li>
+                    <li>Handedness: HandPose can determine the handedness (left or right) of the detected hand.</li>
+                    <li>Multiple Hands: HandPose can detect multiple hands at the same time.</li>
+                </ol>
+                <div id="video-container">
+                    <div id="video-content">
+                        <iframe 
+                            width="475" 
+                            height="267" 
+                            src="https://www.youtube.com/embed/vfNHdVbE-l4" 
+                            title="YouTube video player" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
                 </div>
-            </div>
+                </div>
         </div>
-
-        
-        <div id="description">
-            <h3>What is it?</h3>
-            <p>HandPose is a machine-learning model that allows for palm detection and hand-skeleton finger tracking 
-                in the browser. It can detect multiple hands at a time and for each hand, and provides 21 2D and 3D hand keypoints 
-                that describe important locations on the palm and fingers. The ml5.js HandPose model is based on the HandPose implementation by TensorFlow.js.
-                <br><strong><a href="https://docs.ml5js.org/#/reference/handpose">- ML5.js</a></strong></p>
-        
-            <h3 id="rules">The following functionality is provided:</h3>
-            <ol>
-                <li>Hand Keypoint Detection: HandPose can detect the 2D and 3D coordinates of 21 keypoints on a hand.</li>
-                <li>Handedness: HandPose can determine the handedness (left or right) of the detected hand.</li>
-                <li>Multiple Hands: HandPose can detect multiple hands at the same time.</li>
-            </ol>
-            </div>
             <br>
 
             <div id="sketch-holder">

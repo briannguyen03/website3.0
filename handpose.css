@@ -1,111 +1,150 @@
-a{
-    text-decoration: none;
-    color: gray;
-    transition: all 0.3s;
+a {
+text-decoration: none;
+color: gray;
+transition: all 0.3s;
 }
 
-a:hover{
-    color:tomato;
+a:hover {
+color: tomato;
 }
 
-h1{
-    font-family: "Source Code Pro", "Jersey", sans-serif;
-    font-weight: 500;
+h1 {
+font-family: "Source Code Pro", "Jersey", sans-serif;
+font-weight: 500;
 }
 
-h3{
-    font-family: "Source Code Pro", "Jersey", sans-serif;
-    font-weight: 500;
+h3 {
+font-family: "Source Code Pro", "Jersey", sans-serif;
+font-weight: 500;
 }
 
-
-.bottom{
-    position: relative;
-    top: 50px;
+.bottom {
+position: relative;
+top: 50px;
 }
 
-.graph_descript{
-    height: fit-content;
-    width: 600px;
-    position: relative;
-    top: 150px
-}
-.resources{
-    position: relative;
-    display: flex;
-    justify-content: space-around;
+.graph_descript {
+height: fit-content;
+width: 600px;
+position: relative;
+top: 150px;
 }
 
-#top{
-    font-size: 13px;
-    font-family: "Source Code Pro", "Jersey", sans-serif;
-    font-weight: 100;
-
-    display: flex;
-    justify-content: space-around;
-
-    border: 0.5px solid;
-    border-radius: 20px;
-    height: 25px;
-    width: 250px;
-    background-color: gainsboro;
+.resources {
+position: relative;
+display: flex;
+justify-content: space-around;
 }
 
-#description{
-    font-size: 13px;
-    font-family: "Source Code Pro", "Jersey", sans-serif;
-    font-weight: 100;
-    border: 1px solid black;  /* thickness, style, color */
-    padding: 10px;
-    width: 80vw;       
-    max-width: 800px;   
-    min-width: 300px;  
+#top {
+font-size: 13px;
+font-family: "Source Code Pro", "Jersey", sans-serif;
+font-weight: 100;
+display: flex;
+justify-content: space-around;
+border: 0.5px solid;
+border-radius: 20px;
+height: 25px;
+width: 250px;
+background-color: gainsboro;
 }
 
-#sketch-holder{
-    text-align: center;
-    font-size: 16px;
-    font-family: "Source Code Pro", "Jersey", sans-serif;
-    font-weight: 100;
-    border: 1px solid black;  /* thickness, style, color */
-    padding: 10px;
-    width: 80vw;     
-    max-width: 800px;   
-    min-width: 300px;  
+#description {
+font-size: 13px;
+font-family: "Source Code Pro", "Jersey", sans-serif;
+font-weight: 100;
+border: 1px solid black;
+padding: 10px;
+width: 100%;
+max-width: 500px;
+min-width: 300px;
+margin: 0;
+}
+
+#sketch-holder {
+text-align: center;
+font-size: 16px;
+font-family: "Source Code Pro", "Jersey", sans-serif;
+font-weight: 100;
+border: 1px solid black;
+padding: 10px;
+width: 80vw;
+max-width: 800px;
+min-width: 500px;
 }
 
 #journal-container {
-    position: relative;
-    display: flex;
+position: relative;
+display: flex;
+margin: 0;
 }
-  
- 
+
 #journal-content {
-    width: 35vw;        /* scales with screen size */
-    max-width: 800px;
-    min-width: 300px;
-    padding: 10px;
-    border: 1px solid black;
-    font-family: "Source Code Pro", "Jersey", sans-serif;
-    font-size: 16px;
-    font-weight: 100;
+width: 100%;
+min-width: 500px;
+padding: 10px;
+border: 1px solid black;
+font-family: "Source Code Pro", "Jersey", sans-serif;
+font-size: 16px;
+font-weight: 100;
+margin: 0;
 }
-  
-#side-bar{
-    position: absolute;
-    top: 8rem;
-    right: 10rem;
-    display: flex;
-    flex-direction: column;   /* stack children vertically */
-    align-items: flex-start;  /* left-align content within the sidebar */
-    gap: 1.5rem;
-    width: 30vw;
-    max-width: 400px;
-    min-width: 250px;
+
+#side-bar {
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 1.5rem;
+width: 100%;
+max-width: 300px;
+min-width: 150px;
+margin: 0;
 }
 
 #video-container iframe {
-    border: 2px solid black;     /* thickness, style, color */
-    border-radius: 3px;          /* optional: rounded corners */
-    padding: 0;                  /* usually keep this 0 for iframes */
-  }
+border: 2px solid black;
+border-radius: 3px;
+padding: 0;
+}
+
+/* MOBILE LAYOUT */
+.content-wrapper {
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 2rem;
+padding: 0;
+margin: 0;
+width: 100%;
+}
+
+/* DESKTOP LAYOUT OVERRIDE */
+@media (min-width: 1050px) {
+.content-wrapper {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 4rem;
+    padding-left: 0rem;
+    width: fit-content;
+    margin-left: 0;
+}
+
+#description,
+#side-bar {
+    align-self: stretch;
+}
+
+#description {
+    width: 60vw;
+    height: 60vw;
+    max-height: 550px;
+    min-height: 400px;
+    max-width: 800px;
+}
+
+#side-bar {
+    width: 40vw;
+    max-width: 500px;
+}
+}
