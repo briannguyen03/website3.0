@@ -10,7 +10,7 @@ function setup() {
   let canvas;
   if (windowWidth < 600) {
     // Mobile
-    canvas = createCanvas(450, 250);
+    canvas = createCanvas(350, 350);
   } else if (windowWidth < 1024) {
     // Tablet
     canvas = createCanvas(600, 320);
