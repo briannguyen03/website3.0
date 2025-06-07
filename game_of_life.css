@@ -58,7 +58,7 @@ font-family: "Source Code Pro", "Jersey", sans-serif;
 font-weight: 100;
 border: 1px solid black;
 padding: 10px;
-width: 100%;
+width: 30vw;
 max-width: 500px;
 min-width: 300px;
 margin: 0;
@@ -71,9 +71,9 @@ font-family: "Source Code Pro", "Jersey", sans-serif;
 font-weight: 100;
 border: 1px solid black;
 padding: 10px;
-width: 80vw;
-max-width: 800px;
-min-width: 500px;
+width: 30vw;
+max-width: 500px;
+min-width: 300px;
 }
 
 #journal-container{
@@ -84,7 +84,8 @@ margin: 0;
 
 #journal-content{
 width: 100%;
-min-width: 500px;
+min-width: 300px;
+max-width: 500px;
 padding: 10px;
 border: 1px solid black;
 font-family: "Source Code Pro", "Jersey", sans-serif;
@@ -110,6 +111,7 @@ border-radius: 2px;
 padding: 0;
 }
 
+
 /* MOBILE LAYOUT */
 .content-wrapper{
 display: flex;
@@ -119,6 +121,7 @@ gap: 2rem;
 padding: 0;
 margin: 0;
 width: 100%;
+max-width: fit-content;
 }
 
 /* DESKTOP LAYOUT OVERRIDE */
@@ -127,8 +130,7 @@ width: 100%;
 flex-direction: row;
 justify-content: flex-start;
 align-items: stretch;
-gap: 4rem;
-padding-left: 0rem;
+gap: 3rem;
 width: fit-content;
 margin-left: 0;
 }
@@ -148,8 +150,31 @@ max-width: 800px;
 
 #side-bar{
 width: 40vw;
-max-width: 500px;
-}
+max-width: 400px;
 }
 
+#journal-content{
+width: 30vw;
+min-width: auto;
+max-width: 375px;
+padding: 10px;
+border: 1px solid black;
+font-family: "Source Code Pro", "Jersey", sans-serif;
+font-size: 16px;
+font-weight: 100;
+margin: 0;
+}
 
+#sketch-holder{
+text-align: center;
+font-size: 16px;
+font-family: "Source Code Pro", "Jersey", sans-serif;
+font-weight: 100;
+border: 1px solid black;
+padding: 10px;
+width: 60vw;
+max-width: 800px;
+min-width: 500px;
+}
+
+}

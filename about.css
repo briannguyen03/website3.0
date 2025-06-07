@@ -36,7 +36,7 @@ hr{
     flex-direction: column;
     font-family: "Source Code Pro", sans-serif;
     position: relative;
-    top: 130px;
+    top: 30px;
 }
   
   /* NEW: wrap text and image */
@@ -82,7 +82,7 @@ hr{
   
 #mid{
     position: relative;
-    top: 300px;
+    top: 200px;
 }
 
 #mid h2{
@@ -92,7 +92,7 @@ hr{
 
 #bottom {
     position: relative;
-    margin-top: 18rem; /* use positive margin instead of -8rem */
+    margin-top: 11rem; /* use positive margin instead of -8rem */
     padding: 2rem 1rem;
 }
   

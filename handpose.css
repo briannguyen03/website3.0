@@ -23,18 +23,6 @@ position: relative;
 top: 50px;
 }
 
-.graph_descript {
-height: fit-content;
-width: 600px;
-position: relative;
-top: 150px;
-}
-
-.resources {
-position: relative;
-display: flex;
-justify-content: space-around;
-}
 
 #top {
 font-size: 13px;
@@ -81,7 +69,8 @@ margin: 0;
 
 #journal-content {
 width: 100%;
-min-width: 500px;
+min-width: 200px;
+max-width: 400px;
 padding: 10px;
 border: 1px solid black;
 font-family: "Source Code Pro", "Jersey", sans-serif;
@@ -124,7 +113,7 @@ width: 100%;
     flex-direction: row;
     justify-content: flex-start;
     align-items: stretch;
-    gap: 4rem;
+    gap: 3rem;
     padding-left: 0rem;
     width: fit-content;
     margin-left: 0;
@@ -145,6 +134,6 @@ width: 100%;
 
 #side-bar {
     width: 40vw;
-    max-width: 500px;
+    max-width: 400px;
 }
 }
