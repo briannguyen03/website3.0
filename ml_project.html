@@ -28,16 +28,6 @@
         <hr>
 
         <div class="content-wrapper">
-            <div id="side-bar">
-                <div id="journal-container">
-                    <div id="journal-content">
-                        <h3>What I learned</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel itaque consequatur minus delectus ex ipsam animi voluptatem dolore, nisi suscipit odio, doloribus dicta quia obcaecati saepe atque porro, distinctio adipisci!</p>
-                    </div>
-                </div>
-            </div>
-    
-            
             <div id="description">
                 <h3>What is it?</h3>
                 <p>HandPose is a machine-learning model that allows for palm detection and hand-skeleton finger tracking 
@@ -51,8 +41,9 @@
                     <li>Handedness: HandPose can determine the handedness (left or right) of the detected hand.</li>
                     <li>Multiple Hands: HandPose can detect multiple hands at the same time.</li>
                 </ol>
-                <div id="video-container">
-                    <div id="video-content">
+                <br>
+                <br>
+                <div id="video-container" class="video-wrapper">
                         <iframe 
                             width="475" 
                             height="267" 
@@ -62,8 +53,23 @@
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                             allowfullscreen>
                         </iframe>
-                    </div>
                 </div>
+                </div>
+
+                <div id="side-bar">
+                    <div id="journal-container">
+                        <div id="journal-content">
+                            <h3>What I learned</h3>
+                            <p>Building on what I learned from the <a href="handpose.html"><strong>handpose projects</strong></a> and with guidance from the Coding Train’s ML playlist, I created my own project using the HandPose model.</p>
+                   
+                            <p>This project combines real-time hand tracking with logic to detect the distance between the index finger and thumb on both hands. The left hand acts as the "brush" when the user pinches their index finger and thumb together, a circle is painted on the canvas at that X/Y coordinate.
+                                On the other hand (literaly), users can control the size of the circle by adjusting the distance between the index finger and thumb on their right hand.</p>
+
+                            <p>Since the HandPose model is based on MobileNetV1, it supports real-time tracking <strong>even on mobile devices</strong>, though performance may vary depending on the device's processing power.</p>
+
+                            <p>Bellow is demo of the model, press start to begin the video feed and follow the instrunctions to begin</p>
+                        </div>
+                    </div>
                 </div>
         </div>
             <br>
@@ -71,7 +77,6 @@
             <div id="sketch-holder">
                 <h3>Press Start to Begin</h3>
                 <p>Hold up both hands with your index and thumb apart. Pinch the index and thumb of your left hand to draw on the canvas. The distance between your right hand index and thumb controls the thickness of the brush</p>
-                  <!-- Your sketch file -->
                 <script id="script" src="drawing_with_ai.js"></script>
                 <div id="controls">
                     <button onclick="startVision()">Start</button>
@@ -84,7 +89,7 @@
                 <div class="graph">
                     <img src="images/ml_image.png" height="500" width="400">
                    <div class="graph_descript">
-                    <p>This is a graph taken from a <a href="https://research.google/blog/on-device-real-time-hand-tracking-with-mediapipe/" target="_blank">Google</a> research blog.<br>"Our MediaPipe graph for hand tracking is shown below.<br>The graph consists of two subgraphs—one for hand detection and one for hand keypoints (i.e., landmark) computation."</p>
+                    <p>This is a graph taken from a <a href="https://research.google/blog/on-device-real-time-hand-tracking-with-mediapipe/" target="_blank">Google</a> research blog.<br><br>"Our MediaPipe graph for hand tracking is shown below.<br>The graph consists of two subgraphs—one for hand detection and one for hand keypoints (i.e., landmark) computation."</p>
                     <a href="https://www.linkedin.com/posts/bnguyen2027_near-the-end-of-december-i-started-experimenting-activity-7286004341327478785-YRMX?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEQEeQUBrdVoBA-wQlT4jWn0rKIlG5mG8b4" target="_blank"><p>check out my linkedin post!</p></a>
                    </div>
                 </div>

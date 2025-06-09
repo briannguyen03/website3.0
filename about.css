@@ -48,7 +48,7 @@ hr{
 }
   
   /* On wider screens, put text + image side-by-side */
-  @media (min-width: 800px) {
+  @media (min-width: 1024px) {
     #about-content {
       flex-direction: row;
       align-items: flex-start;
