@@ -1,0 +1,233 @@
+a{
+text-decoration: none;
+color: gray;
+transition: all 0.3s;
+}
+
+a:hover{
+color: tomato;
+}
+
+h1{
+font-family: "Source Code Pro", "Jersey", sans-serif;
+font-weight: 500;
+}
+
+h3{
+font-family: "Source Code Pro", "Jersey", sans-serif;
+font-weight: 500;
+}
+
+.bottom{
+position: relative;
+top: 50px;
+}
+
+.graph_descript{
+height: fit-content;
+width: 600px;
+position: relative;
+top: 150px;
+}
+
+.resources{
+position: relative;
+display: flex;
+justify-content: space-around;
+}
+
+.equation-box {
+    background: #fdfdfd; 
+    border: 1px solid #e0e0e0;
+    border-left: 4px solid #222; 
+    padding: 20px;
+    margin: 25px 0;
+    border-radius: 2px;
+    text-align: center;
+}
+
+.equation-label {
+    font-family: "Source Code Pro", "Jersey", sans-serif;
+    font-weight: 400;
+    font-size: 1.1rem;
+    font-style: italic;
+    color: #444;
+    margin-bottom: 12px;
+}
+
+.equation-formula {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 1.1rem;
+    font-weight: 300;
+    color: #000;
+    letter-spacing: -0.5px;
+    overflow-x: auto;
+}
+
+.repo-link {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px dashed black; 
+    background-color: #f9f9f9;
+}
+
+.repo-icon {
+    font-size: 1.5rem;
+}
+
+.repo-text p {
+    margin: 0;
+    font-family: "Source Code Pro", monospace;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #666;
+}
+
+.repo-text a {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #000;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.repo-link:hover {
+    background-color: #fff;
+    border-style: solid;
+    transition: all 0.2s ease-in-out;
+}
+
+.repo-text a:hover {
+     background-color: tomato; 
+}
+
+    
+#top{
+font-size: 13px;
+font-family: "Source Code Pro", "Jersey", sans-serif;
+font-weight: 100;
+display: flex;
+justify-content: space-around;
+border: 0.5px solid;
+border-radius: 20px;
+height: 25px;
+width: 250px;
+background-color: gainsboro;
+}
+
+
+
+#description{
+font-size: 15px;
+font-family: "Source Code Pro", "Jersey", sans-serif;
+font-weight: 300;
+border: 1px solid black;
+padding: 10px;
+width: 30vw;
+max-width: 500px;
+min-width: 300px;
+margin: 0;
+}
+
+
+#journal-container{
+position: relative;
+display: flex;
+margin: 0;
+}
+
+#journal-content{
+width: 100%;
+min-width: 350px;
+max-width: 500px;
+padding: 10px;
+border: 1px solid black;
+font-family: "Source Code Pro", "Jersey", sans-serif;
+font-size: 16px;
+font-weight: 100;
+margin: 0;
+}
+
+#side-bar{
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 1.5rem;
+width: 100%;
+max-width: 300px;
+min-width: 150px;
+margin: 0;
+}
+
+
+/* MOBILE LAYOUT */
+.content-wrapper{
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 2rem;
+padding: 0;
+margin: 0;
+width: 100%;
+max-width: fit-content;
+}
+
+/* DESKTOP LAYOUT OVERRIDE */
+@media (min-width: 1050px){
+.content-wrapper{
+flex-direction: row;
+justify-content: flex-start;
+align-items: stretch;
+gap: 3rem;
+width: fit-content;
+margin-left: 0;
+}
+
+#description,
+#side-bar {
+align-self: stretch; 
+}
+
+#description{
+width: 60vw;
+height: auto;
+max-height: none;
+min-height: 300px;
+max-width: 800px;
+}
+
+#side-bar{
+width: 40vw;
+max-width: 400px;
+}
+
+#journal-content{
+width: 30vw;
+min-width: auto;
+max-width: 375px;
+padding: 10px;
+border: 1px solid black;
+font-family: "Source Code Pro", "Jersey", sans-serif;
+font-size: 16px;
+font-weight: 100;
+margin: 0;
+}
+
+#sketch-holder{
+text-align: center;
+font-size: 16px;
+font-family: "Source Code Pro", "Jersey", sans-serif;
+font-weight: 100;
+border: 1px solid black;
+padding: 10px;
+width: 60vw;
+max-width: 800px;
+min-width: 500px;
+}
+
+}

@@ -3,7 +3,7 @@ body{
 }
 
 p{
-    font-size: 13px;
+    font-size: 15px;
 }
 
 hr{
@@ -39,7 +39,7 @@ hr{
     top: 30px;
 }
   
-  /* NEW: wrap text and image */
+
   #about-content {
     display: flex;
     flex-direction: column;

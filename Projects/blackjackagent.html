@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>p5.js Sketch</title>
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.9.0/lib/p5.min.js"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Jersey+10&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="blackjackagent.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+
+<body>
+
+    <div id="top">
+        <a id="homepage" href="index.html" title="home">🏠 home</a>
+        <a id="projects" href="projects.html" title="projects">🧰 projects</a>
+        <a id="email" href="mailto:nguyen.brian1403@gmail.com" title="email">📫 e-mail</a>
+    </div>
+
+
+  <main>
+    <h1>Blakcjack Agent</h1>
+    <hr>
+
+    <div class="content-wrapper">
+
+    
+        <div id="description">
+        <h3>What is it?</h3>
+        <p>
+        This project evolved from a terminal-based Blackjack game written in <strong>C</strong> into an exploration of <strong>Reinforcement Learning (RL)</strong>. After building the core engine, I developed an AI agent to master the game using <strong>Q-learning</strong>, a model-free RL method. 
+        </p>
+
+        <p>
+            The agent’s decision-making is powered by the <strong>Bellman Equation</strong>, which acts as the mathematical foundation to update Q-values based on rewards and state transitions. To ensure the bot didn't just repeat safe moves, I implemented an <strong>epsilon-greedy strategy</strong>, introducing randomness to balance exploration and exploitation during the learning phase.
+        </p>
+
+        <p>
+            After training the model over <strong>100,000 simulated hands</strong>, the agent reached a <strong>41% win rate</strong>, closely approaching the statistical casino average of approximately 42%. This project highlights my ability to bridge low-level systems programming with complex algorithmic logic, specifically in the realms of state-space management and stochastic optimization.
+        </p>
+        
+    
+        <div class="equation-box">
+        <p class="equation-label">The Bellman Equation</p>
+        <div class="equation-formula">
+            Q(s, a) = Q(s, a) + α [ r + γ max<sub>a'</sub> Q(s', a') - Q(s, a) ]
+        </div>
+        </div>
+
+
+    
+        <br>
+
+        <div class="repo-link">
+        <span class="repo-icon">📂</span>
+        <div class="repo-text">
+            <p>Repo Link</p>
+            <a href="https://github.com/briannguyen03/blackjack-agent" target="_blank">
+                github.com/briannguyen03/blackjack-agent
+            </a>
+        </div>
+        </div>
+
+        </div>
+    
+        <div id="side-bar">
+            <div id="journal-container">
+                <div id="journal-content">
+                    <h3>What I learned</h3>
+                    <p>
+                        I actually started this project just to kill time on the ferry, but I wanted to see if I could train a bot that could play the game better than I could. Since I was already working in C, I decided to continue with it. So I built the framework of a simple RL agent from scratch, with no fancy libraries.
+                        <br><br>
+                        The learning is based around a "state" which represents every scenerio that could come up in the game. I ended up giving it three attributes to look at: the player's sum, the dealer's face-up card, and whether or not the player has a "usable" ace. Getting those three variables to map correctly to an index in a flattened array was a headache, especially with all the manual indexing you have to do in C.
+                        <br><br>
+                        The biggest source of frustration was the the training loop. Because C is so unforgiving, a tiny syntax error in the math wouldn't crash the program, it would just make the agent act eraticly. So seeing the win rate slowly climb toward 41% after thousands of simulated hands was really satisfying, because the agent was actually "learning" basic strategy on its own.
+                    </p>                   
+            </div>
+        </div>
+    </div>
+
+
+  </main>
+  
+</body>
+</html>
