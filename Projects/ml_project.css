@@ -76,7 +76,7 @@ h3{
 #description{
     font-size: 13px;
     font-family: "Source Code Pro", "Jersey", sans-serif;
-    font-weight: 100;
+    font-weight: 400;
     border: 1px solid black;
     padding: 10px;
     width: 30vw;
@@ -115,7 +115,7 @@ h3{
     border: 1px solid black;
     font-family: "Source Code Pro", "Jersey", sans-serif;
     font-size: 16px;
-    font-weight: 100;
+    font-weight: 300;
     margin: 0;
 }
   
@@ -133,7 +133,7 @@ h3{
 #video-container iframe {
     border: 2px solid black;     /* thickness, style, color */
     border-radius: 3px;          /* optional: rounded corners */
-    padding: 0;                  /* usually keep this 0 for iframes */
+    padding: 0;                  
 }
 
 .video-wrapper {
@@ -169,7 +169,7 @@ h3{
     max-width: fit-content;
 }
 
-
+/* Desktop Layout */
 @media (min-width: 1050px){
 .content-wrapper{
 flex-direction: row;
@@ -186,11 +186,11 @@ align-self: stretch;
 }
 
 #description{
-width: 60vw;
+width: 70vw;
 height: fit-content;
 max-height: 600px;
 min-height: 520px;
-max-width: 800px;
+max-width: 1800px;
 }
 
 #side-bar{
@@ -206,7 +206,7 @@ padding: 10px;
 border: 1px solid black;
 font-family: "Source Code Pro", "Jersey", sans-serif;
 font-size: 16px;
-font-weight: 100;
+font-weight: 300;
 margin: 0;
 }
 

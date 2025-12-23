@@ -53,9 +53,9 @@ background-color: gainsboro;
 
 
 #description{
-font-size: 13px;
+font-size: 14px;
 font-family: "Source Code Pro", "Jersey", sans-serif;
-font-weight: 100;
+font-weight: 400;
 border: 1px solid black;
 padding: 10px;
 width: 30vw;
@@ -90,7 +90,7 @@ padding: 10px;
 border: 1px solid black;
 font-family: "Source Code Pro", "Jersey", sans-serif;
 font-size: 16px;
-font-weight: 100;
+font-weight: 400;
 margin: 0;
 }
 
@@ -161,11 +161,11 @@ align-self: stretch;
 }
 
 #description{
-width: 60vw;
-height: 72vw;
+width: 70vw;
+height: auto;
 max-height:750px;
 min-height: 500px;
-max-width: 800px;
+max-width: 1800px;
 }
 
 #side-bar{
@@ -181,7 +181,7 @@ padding: 10px;
 border: 1px solid black;
 font-family: "Source Code Pro", "Jersey", sans-serif;
 font-size: 16px;
-font-weight: 100;
+font-weight: 400;
 margin: 0;
 }
 
